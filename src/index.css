@@ -1,5 +1,12 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  padding:0;
+  margin:0;
+}
+
 body {
-  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -10,4 +17,80 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+ul {
+  list-style-type: none;
+}
+
+
+.container {
+  width:80%;
+  margin:0 auto;
+}
+
+
+.container__header {
+  font-size:2rem;
+  text-align: center;
+  margin-bottom:2rem;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  margin:2rem auto;
+  width:100%;
+}
+
+.search-btn {
+  cursor: pointer;
+}
+
+.delete-all-btn {
+  position: relative;
+  left:50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  margin-bottom:1rem;
+}
+
+
+
+.list__item {
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  margin:0.5rem 1rem;
+  padding:0.5rem 1rem;
+  background-color: rgb(240, 240, 240);
+  border-radius: 10px;
+}
+
+.item__title {
+  font-weight:400;
+}
+
+.item-delete-btn {
+  margin-left:auto;
+  font-size:2rem;
+  padding:0.25rem 1rem;
+  border:none;
+  background-color: crimson;
+  color:#efefef;
+  border-radius:10px;
+  width:50px;
+  height:50px;
+}
+
+.item-delete-btn:hover {
+  cursor: pointer;
+  opacity:0.8;
+  transition: all 75ms ease;
+}
+
+.item-delete-btn:active {
+  opacity:1;
+  transition: all 75ms ease;
 }

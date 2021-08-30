@@ -1,25 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+const App = () => {
+    return (
+        <section className="container">
+            <h1 className="container__header">Todolist</h1>
+
+            <div className="search-container">
+                <input class="search-input" type="text" placeholder="task name eg: buy milk"/>
+                <button class="search-btn">add task</button>
+            </div>
+
+            <button class="delete-all-btn">delete all tasks</button>
+
+            <div className="list-container">
+                <ul className="list">
+                    <li className="list__item">
+                        <h2 className="item__title">item 1</h2>
+                        <button className="item-delete-btn">&times;</button>
+                    </li>
+
+                    <li className="list__item">
+                        <h2 className="item__title">item 2</h2>
+                        <button className="item-delete-btn">&times;</button>
+                    </li>
+
+                    <li className="list__item">
+                        <h2 className="item__title">item 3</h2>
+                        <button className="item-delete-btn">&times;</button>
+                    </li>
+
+                </ul>
+            </div>
+        </section>
+    )
 }
+
 
 export default App;
